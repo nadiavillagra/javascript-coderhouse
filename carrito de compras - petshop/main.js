@@ -58,7 +58,7 @@ function comprarProdutos() {
 
 function descuentoCompra(totalCompra) {
     const descuento = 0.80;
-    if (totalCompra >= 1000) {
+    if (totalCompra >= 10000) {
         totalCompra = totalCompra * descuento;
         alert('Tenes 20% de descuento')
     }
@@ -66,12 +66,12 @@ function descuentoCompra(totalCompra) {
 }
 
 function calcularEnvio(totalCompra) {
-    const costoEnvio = 500;
+    const costoEnvio = 700;
     let envioADomicilio = confirm('Quieres envio a domicilio?');
 
-    if (envioADomicilio && totalCompra >= 2000) {
+    if (envioADomicilio && totalCompra >= 10000) {
         alert('Tienes envio gratis. El total de la compra es: ' + totalCompra);
-    } else if (envioADomicilio && totalCompra < 2000 && totalCompra !== 0) {
+    } else if (envioADomicilio && totalCompra < 10000 && totalCompra !== 0) {
         totalCompra += costoEnvio;
         alert('El costo del envio es de $500. El total de la compra es: ' + totalCompra);
     } else {
@@ -91,45 +91,3 @@ function comprar() {
 }
 
 comprar();
-
-
-
-/* 
-function validarCantidad(cantidad) {
-    while (Number.isNaN(cantidad) || cantidad === 0) {
-        if (cantidad !== 0) {
-            alert('Debe agregar al menos un producto.')
-        } else {
-            alert('Debe ingresar un numero.')
-        }
-        cantidad = parseInt(prompt('¿Cuantos queres comparar?'));
-    }
-
-    return cantidad;
-}
-
-function descuentoCompra(totalCompra) {
-    const descuento = 0.80;
-    if (totalCompra >= 1000) {
-        return totalCompra * descuento;
-    } else {
-        return totalCompra;
-    }
-}
-
-
-function calcularEnvio(totalCompra) {
-    const costoEnvio = 500;
-    let envioADomicilio = confirm('Quieres envio a domicilio?');
-
-    if (envioADomicilio && totalCompra >= 2000) {
-        alert('Tienes envio gratis. El total de la compra es: ' + totalCompra);
-    } else if (envioADomicilio && totalCompra < 2000 && totalCompra !== 0) {
-        totalCompra += costoEnvio;
-        alert('El costo del envio es de $500. El total de la compra es: ' + totalCompra);
-    } else {
-        alert('El total de la compra es: ' + totalCompra);
-    }
-}
-
-calcularEnvio(descuentoCompra(comprarProdutos())); */

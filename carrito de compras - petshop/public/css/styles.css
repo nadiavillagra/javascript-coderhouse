@@ -15,7 +15,7 @@ img {
 }
 
 header {
-  background-color: #292929;
+  background-color: #355C7D;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,9 +25,10 @@ header {
   /* margin-bottom: 20px; */
 }
 header .logo {
-  width: 7rem;
-  height: 7rem;
-  margin: 1rem; }
+    width: 7rem;
+    height: 7rem;
+    margin: 1rem; 
+}
 
 h1 {
   text-align: center;
@@ -186,7 +187,7 @@ select {
 footer {
   background-color: #292929;
   font-size: 1rem;
-  color: rgb(225, 76, 65);
+  color: #355C7D;
   text-align: center;
   padding: 1rem;
   margin: 0;

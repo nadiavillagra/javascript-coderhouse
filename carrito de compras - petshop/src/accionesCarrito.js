@@ -10,7 +10,7 @@ const validarProductoRepetido = (productoId) => {
         carrito = obtenerCarritoStorage();
     };
 
-    const productoRepetido = carrito.find( producto => producto.id === productoId);
+    const productoRepetido = carrito.find(producto => producto.id === productoId);
 
     if (productoRepetido) {
         productoRepetido.cantidad++
@@ -28,7 +28,7 @@ const validarProductoRepetido = (productoId) => {
 
 const agregarAlCarrito = (productoId) => {
     const contenedor = document.getElementById("carrito-contenedor");
-    const producto = productos.find( producto => producto.id === productoId );
+    const producto = productos.find(producto => producto.id === productoId);
     carrito.push(producto);
 
     const div = document.createElement("div");
@@ -65,7 +65,7 @@ const pintarCarrito = (carrito) => {
 
 const eliminarProductoCarrito = (productoId) => {
     const carritoStorage = obtenerCarritoStorage();
-    const carritoActualizado = carritoStorage.filter( producto => producto.id != productoId);
+    const carritoActualizado = carritoStorage.filter(producto => producto.id != productoId);
 
     actualizarTotalesCarrito(carritoActualizado);
     pintarCarrito(carritoActualizado);

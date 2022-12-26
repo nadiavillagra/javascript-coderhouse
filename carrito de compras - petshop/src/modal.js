@@ -5,18 +5,22 @@ const abrirCarrito = document.getElementById('cesta-carrito');
 const cerrarCarrito = document.getElementById('btn-cerrar-carrito');
 const modalCarrito = document.querySelector('.modal-carrito')
 
+// abrrir carrito.
 abrirCarrito.addEventListener('click', () => {
     modalContenedor.classList.toggle('modal-active')
 });
 
+// cerrar carrito.
 cerrarCarrito.addEventListener('click', () => {
     modalContenedor.classList.toggle('modal-active')
 });
 
+// Contenedor carrito
 modalContenedor.addEventListener('click', () => {
     cerrarCarrito.click()
 });
 
+// Preguntas al usuario para eliminar productos del carrito.
 modalCarrito.addEventListener("click", (e) => {
     e.stopPropagation();
     if (e.target.classList.contains('boton-eliminar')) {

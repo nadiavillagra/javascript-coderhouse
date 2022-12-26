@@ -4,6 +4,7 @@ import { obtenerCarritoStorage } from "./storage.js";
 import { pintarCarrito } from "./accionesCarrito.js";
 import { actualizarTotalesCarrito } from "./actualizarCarrito.js";
 
+// Inicio.
 document.addEventListener('DOMContentLoaded', () => {
     mostrarProductos(productos);
 

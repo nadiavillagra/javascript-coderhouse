@@ -4,6 +4,7 @@ import { obtenerCarritoStorage } from './storage.js';
 
 let carrito = [];
 
+// validar productos repetidos: Suma la cantidad del producto repetido.
 const validarProductoRepetido = (productoId) => {
 
     if (localStorage.getItem("carrito")) {
@@ -26,6 +27,7 @@ const validarProductoRepetido = (productoId) => {
     }
 };
 
+// agregar productos en el carrito
 const agregarAlCarrito = (productoId) => {
     const contenedor = document.getElementById("carrito-contenedor");
     const producto = productos.find(producto => producto.id === productoId);
@@ -46,6 +48,7 @@ const agregarAlCarrito = (productoId) => {
     }).showToast();
 };
 
+// "pintar" carrito: cuenta los productos agregados al carrito de compras 
 const pintarCarrito = (carrito) => {
     const contenedor = document.getElementById("carrito-contenedor");
 
@@ -63,6 +66,7 @@ const pintarCarrito = (carrito) => {
     });
 };
 
+// eliminar producto del carrito
 const eliminarProductoCarrito = (productoId) => {
     const carritoStorage = obtenerCarritoStorage();
     const carritoActualizado = carritoStorage.filter(producto => producto.id != productoId);

@@ -1,5 +1,6 @@
 import { guardarCarritoStorage } from "./storage.js";
 
+// actualizar totales del carrito: suma o resta productos en el carrito de compras y muetra el total en precio y cantidad.
 const actualizarTotalesCarrito = (carrito) => {
     const totalCantidad = carrito.reduce((acc, item) => acc + item.cantidad, 0);
     const totalCompra = carrito.reduce((acc, item) => acc + (item.precio * item.cantidad), 0);

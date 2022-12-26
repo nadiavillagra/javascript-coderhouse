@@ -1,3 +1,6 @@
+// "Catalogo" de productos del petshop. 
+// Croquetas para perro:
+
 const productos =
     [
         {

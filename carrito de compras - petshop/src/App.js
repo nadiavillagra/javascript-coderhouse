@@ -1,5 +1,6 @@
 import { validarProductoRepetido } from "./accionesCarrito.js";
 
+// mostrar productos: muestra los productos a la venta, es el catalogo.
 const mostrarProductos = (productos) => {
   const contenedorProductos = document.getElementById("producto-contenedor");
 
